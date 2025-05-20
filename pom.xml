@@ -27,8 +27,9 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
-	</properties>
+    <java.version>17</java.version>
+</properties>
+
 	<dependencies>
     <!-- Spring Data JPA -->
     <dependency>
@@ -56,12 +57,15 @@
 
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
+		<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.13.0</version>
+    <configuration>
+        <source>17</source>
+        <target>17</target>
+    </configuration>
+</plugin>
 	</build>
 
 </project>
